@@ -1,6 +1,6 @@
 {
     "name": "@nebulaglitch/runghost",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "A dashboard to monitor multiple GitHub identities from a single interface",
     "main": "dist/index.js",
     "bin": {
