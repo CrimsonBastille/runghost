@@ -6,9 +6,8 @@ import { DependenciesRefreshButton } from '../../components/DependenciesRefreshB
 export default async function DependenciesPage() {
     const config = await loadConfigFromDirectory();
 
-    // Use environment variable or fallback to the known workspace path
-    const workspacePath = process.env.WORKSPACE_PATH || '/Users/you/gitw';
-    const repositoryPaths = await scanWorkspaceForPackages(workspacePath);
+    // Use workspace path from configuration
+    const repositoryPaths = await scanWorkspaceForPackages(config.workspacePath);
 
     // Initialize database and build enhanced dependency graph with cached data
     const database = createDependenciesDatabase();

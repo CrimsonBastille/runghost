@@ -1,6 +1,6 @@
 {
     "name": "@nebulaglitch/runghost",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "A dashboard to monitor multiple GitHub identities from a single interface",
     "main": "dist/index.js",
     "bin": {
@@ -50,6 +50,7 @@
         "zod": "^3.25.74"
     },
     "devDependencies": {
+        "@eslint/eslintrc": "^3.3.1",
         "@tailwindcss/postcss": "^4.1.11",
         "@types/d3": "^7.4.3",
         "@types/fs-extra": "^11.0.4",
@@ -62,6 +63,7 @@
         "autoprefixer": "^10.4.21",
         "eslint": "^9.30.1",
         "eslint-config-next": "^15.3.5",
+        "globals": "^16.3.0",
         "postcss": "^8.5.6",
         "tailwindcss": "^4.1.11",
         "tailwindcss-animate": "^1.0.7",

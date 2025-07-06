@@ -7,8 +7,7 @@ export async function POST(req: NextRequest) {
         console.log('Refreshing dependency data...');
 
         const config = await loadConfigFromDirectory();
-        const workspacePath = process.env.WORKSPACE_PATH || '/Users/you/gitw';
-        const repositoryPaths = await scanWorkspaceForPackages(workspacePath);
+        const repositoryPaths = await scanWorkspaceForPackages(config.workspacePath);
 
         // Initialize database and force refresh
         const database = createDependenciesDatabase();

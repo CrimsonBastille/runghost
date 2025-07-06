@@ -143,6 +143,11 @@ export async function configureFromCLI(): Promise<[RunGhostConfig, CLIConfig]> {
         config.dataDirectory = path.join(os.homedir(), config.dataDirectory.slice(1));
     }
 
+    // Expand tilde in workspacePath
+    if (config.workspacePath.startsWith('~')) {
+        config.workspacePath = path.join(os.homedir(), config.workspacePath.slice(1));
+    }
+
     // Determine the command being run
     const command = program.args[0] || 'start';
     const cliConfig: CLIConfig = {
@@ -180,6 +185,11 @@ export async function loadConfigFromDirectory(configDir?: string): Promise<RunGh
     // Expand tilde in dataDirectory
     if (config.dataDirectory.startsWith('~')) {
         config.dataDirectory = path.join(os.homedir(), config.dataDirectory.slice(1));
+    }
+
+    // Expand tilde in workspacePath
+    if (config.workspacePath.startsWith('~')) {
+        config.workspacePath = path.join(os.homedir(), config.workspacePath.slice(1));
     }
 
     return config;
@@ -227,6 +237,7 @@ export async function initializeConfig(configDir?: string): Promise<void> {
         port: 4000,
         host: 'localhost',
         dataDirectory: '~/.runghost',
+        workspacePath: '~/gitw',
         cacheTimeout: 300,
         theme: 'auto',
         identities: {

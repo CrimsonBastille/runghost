@@ -56,7 +56,7 @@ export async function startServer(config: RunGhostConfig): Promise<void> {
     const isDevelopment = process.env.NODE_ENV !== 'production';
     const command = isDevelopment ? 'dev' : 'start';
 
-    const nextProcess = spawn('npm', ['run', command], {
+    const nextProcess = spawn('pnpm', ['run', command], {
         stdio: 'inherit',
         cwd: projectRoot,
         env: {

@@ -37,8 +37,7 @@ export default async function IdentityDetailPage({ params }: IdentityDetailPageP
         const pullRequestsResult = await githubClient.getPullRequestsForIdentity(id)
 
         // Get dependency graph data for this identity
-        const workspacePath = process.env.WORKSPACE_PATH || '/Users/you/gitw'
-        const repositoryPaths = await scanWorkspaceForPackages(workspacePath)
+        const repositoryPaths = await scanWorkspaceForPackages(config.workspacePath)
         const database = createDependenciesDatabase()
         await database.initialize()
         const fullDependencyGraph = await buildCachedEnhancedDependencyGraph(repositoryPaths, config.identities, database)
