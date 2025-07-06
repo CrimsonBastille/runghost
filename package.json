@@ -16,7 +16,8 @@
         "test:coverage": "vitest --coverage",
         "lint": "eslint src/**/*.{ts,tsx}",
         "clean": "rm -rf .next dist coverage",
-        "prepare": "npm run build"
+        "prepare": "npm run build",
+        "prepublishOnly": "pnpm run clean && pnpm run build"
     },
     "keywords": [
         "github",
