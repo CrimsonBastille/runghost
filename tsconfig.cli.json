@@ -13,8 +13,7 @@
     "include": [
         "src/cli.ts",
         "src/lib/**/*.ts",
-        "src/types/**/*.ts",
-        "src/api/**/*.ts"
+        "src/types/**/*.ts"
     ],
     "exclude": [
         "src/app/**/*",

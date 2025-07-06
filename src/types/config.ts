@@ -22,6 +22,7 @@ export const RunGhostConfigSchema = z.object({
 
     // Data storage configuration
     dataDirectory: z.string().default('~/.runghost').describe('Directory to store cached data'),
+    workspacePath: z.string().default('~/gitw').describe('Path to the workspace directory containing repositories'),
 
     // Database configuration
     database: z.object({
@@ -86,6 +87,7 @@ export const DEFAULT_CONFIG: Partial<RunGhostConfig> = {
     port: 4000,
     host: 'localhost',
     dataDirectory: '~/.runghost',
+    workspacePath: '~/gitw',
     cache: {
         identityTimeout: 86400, // 24 hours
         repositoryTimeout: 21600, // 6 hours
