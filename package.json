@@ -26,7 +26,7 @@
         "nextjs"
     ],
     "author": "NebulaGlitch",
-    "license": "MIT",
+    "license": "Apache-2.0",
     "dependencies": {
         "@libsql/client": "^0.4.0",
         "@octokit/rest": "^22.0.0",

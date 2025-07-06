@@ -212,7 +212,7 @@ RunGhost stores cached data in the configured data directory (default: `~/.rungh
 
 ## License
 
-MIT License - see LICENSE file for details.
+Apache License 2.0 - see LICENSE file for details.
 
 ## Support
 
