@@ -1,0 +1,9 @@
+.env
+.next/
+.runghost/
+dist/
+input/
+output/
+processed/
+node_modules/
+tsconfig.tsbuildinfo

@@ -1,0 +1,25 @@
+{
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+        "target": "ES2020",
+        "module": "CommonJS",
+        "moduleResolution": "node",
+        "outDir": "./dist",
+        "noEmit": false,
+        "declaration": true,
+        "declarationMap": true,
+        "jsx": "react-jsx"
+    },
+    "include": [
+        "src/cli.ts",
+        "src/lib/**/*.ts",
+        "src/types/**/*.ts",
+        "src/api/**/*.ts"
+    ],
+    "exclude": [
+        "src/app/**/*",
+        "src/components/**/*",
+        "**/*.test.ts",
+        "**/*.test.tsx"
+    ]
+}
